@@ -50,7 +50,7 @@ const addFooterToPredictionAsync = async (widget, element) => {
     }
 
     const score = await getScoreAsync(widgetId);
-    body.insertAdjacentHTML('afterend', `<livelike-footer class="prediction-follow-up-footer-message">${score.rewardItemAmount} ${score.rewardItemName}</livelike-footer>`);
+    body.insertAdjacentHTML('afterend', `<livelike-footer class="prediction-follow-up-footer-message">${score.rewardItemAmount} ${score.rewardItemAmount ? score.rewardItemName : ""}</livelike-footer>`);
   }
 };
 
@@ -65,11 +65,11 @@ const init = (clientId, programId, leaderboardId) => {
         "widget.quiz.votedText": "Fait!",
         'widget.textAsk.placeholder': 'Écrivez ici...',
         'widget.textAsk.sendButton.label': 'ENVOYER',
-        "widget.textPrediction.voteButton.label": "Valider!",
+        "widget.textPrediction.voteButton.label": "Valider",
         "widget.textPrediction.votedText": "Fait!",
-        "widget.imagePrediction.voteButton.label": "Valider!",
+        "widget.imagePrediction.voteButton.label": "Valider",
         "widget.imagePrediction.votedText": "Fait!",
-        "widget.numberPrediction.voteButton.label": "Valider!",
+        "widget.numberPrediction.voteButton.label": "Valider",
         "widget.numberPrediction.votedText": "Fait!",
       },
       fr: {
@@ -77,11 +77,11 @@ const init = (clientId, programId, leaderboardId) => {
         "widget.quiz.votedText": "Fait!",
         'widget.textAsk.placeholder': 'Écrivez ici...',
         'widget.textAsk.sendButton.label': 'ENVOYER',
-        "widget.textPrediction.voteButton.label": "Valider!",
+        "widget.textPrediction.voteButton.label": "Valider",
         "widget.textPrediction.votedText": "Fait!",
-        "widget.imagePrediction.voteButton.label": "Valider!",
+        "widget.imagePrediction.voteButton.label": "Valider",
         "widget.imagePrediction.votedText": "Fait!",
-        "widget.numberPrediction.voteButton.label": "Valider!",
+        "widget.numberPrediction.voteButton.label": "Valider",
         "widget.numberPrediction.votedText": "Fait!",
       }
     });
